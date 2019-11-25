@@ -18,6 +18,16 @@ module.exports = {
     '@typescript-eslint/explicit-function-return-type': 'off',
     '@typescript-eslint/no-empty-function': 'warn',
     '@typescript-eslint/no-empty-interface': 'off',
+    '@typescript-eslint/no-unused-vars': [
+      'error',
+      {
+        vars: 'all',
+        args: 'after-used',
+        ignoreRestSiblings: false,
+        argsIgnorePattern: '^_',
+      },
+    ],
+    '@typescript-eslint/no-var-requires': 'warn',
     'import/no-unresolved': 'off',
     'import/order': [
       'error',
@@ -25,6 +35,7 @@ module.exports = {
         'newlines-between': 'always',
       },
     ],
+    'react/prop-types': 'off',
   },
   settings: {
     react: {

@@ -1,5 +1,11 @@
+import React from 'react';
+
+import IndexLayout from '../src/layouts';
+
 const IndexPage = () => (
-  <h1>Testing Next.js App written in TypeScript with Jest</h1>
+  <IndexLayout>
+    <h1>SMMDB v2</h1>
+  </IndexLayout>
 );
 
 export default IndexPage;

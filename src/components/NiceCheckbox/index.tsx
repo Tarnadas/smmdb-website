@@ -8,7 +8,7 @@ interface NiceCheckboxProps {
   label: string;
 }
 
-const NiceCheckbox: React.SFC<NiceCheckboxProps> = (
+const NiceCheckbox: React.FunctionComponent<NiceCheckboxProps> = (
   props: NiceCheckboxProps,
 ): JSX.Element => {
   return (

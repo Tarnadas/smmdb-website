@@ -1,6 +1,7 @@
 module.exports = {
   parser: '@typescript-eslint/parser',
   extends: [
+    'eslint:recommended',
     'plugin:react/recommended',
     'plugin:@typescript-eslint/recommended',
     'prettier/@typescript-eslint',
@@ -16,6 +17,15 @@ module.exports = {
   },
   rules: {
     '@typescript-eslint/explicit-function-return-type': 'off',
+    '@typescript-eslint/explicit-member-accessibility': [
+      'error',
+      {
+        accessibility: 'explicit',
+        overrides: {
+          constructors: 'no-public',
+        },
+      },
+    ],
     '@typescript-eslint/no-empty-function': 'warn',
     '@typescript-eslint/no-empty-interface': 'off',
     '@typescript-eslint/no-unused-vars': [
@@ -28,6 +38,7 @@ module.exports = {
       },
     ],
     '@typescript-eslint/no-var-requires': 'warn',
+    'import/no-named-as-default': 'off',
     'import/no-unresolved': 'off',
     'import/order': [
       'error',
@@ -41,7 +52,6 @@ module.exports = {
     react: {
       version: 'detect',
     },
-    // 'import/extensions': ['.js', '.jsx', '.ts', '.tsx'],
     'import/parsers': { '@typescript-eslint/parser': ['.ts', '.tsx'] },
   },
 };

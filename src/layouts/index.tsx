@@ -1,7 +1,15 @@
 import React from 'react';
+import { Helmet } from 'react-helmet';
 import { styled } from 'linaria/react';
 
+import Navigation from '../modules/navigation/Navigation';
 import { fontSize } from '../constants/styles';
+import { Theme } from '../constants/themes';
+import { useReduxState } from '../state';
+
+interface LayoutProps {
+  theme: Theme;
+}
 
 const Layout = styled.div`
   /* stylelint-disable selector-pseudo-class-no-unknown,property-no-vendor-prefix */
@@ -22,7 +30,6 @@ const Layout = styled.div`
 
     html {
       font-size: ${fontSize}px;
-      background-color: #ffcf00;
       overflow: hidden;
       font-family: SuperMarioMakerExtended, Roboto, arial, sans-serif;
     }
@@ -65,12 +72,28 @@ const Layout = styled.div`
   }
   /* stylelint-enable */
 
-  min-width: 100%;
-  min-height: 100%;
-  max-width: 100%;
-  max-height: 100%;
+  min-width: 100vw;
+  min-height: 100vh;
+  max-width: 100vw;
+  max-height: 100vh;
+  background-color: ${({ theme }: LayoutProps) => theme.background};
 `;
 
-const IndexLayout: React.SFC = props => <Layout>{props.children}</Layout>;
+const IndexLayout: React.FunctionComponent = ({ children }) => {
+  const theme = useReduxState(state => state.theme);
+  return (
+    <Layout theme={theme}>
+      <Helmet>
+        <title>SMMDB</title>
+        <meta
+          name="description"
+          content="Super Mario Maker, Super Mario Maker 2 and Super Mario 64 Maker course database for consoles Switch, Wii U, 3DS and emulators Yuzu, Cemu, Citra and decaf."
+        />
+      </Helmet>
+      <Navigation />
+      {children}
+    </Layout>
+  );
+};
 
 export default IndexLayout;

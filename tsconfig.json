@@ -7,8 +7,6 @@
     "allowJs": true,
     "moduleResolution": "node",
     "allowSyntheticDefaultImports": true,
-    "noUnusedLocals": true,
-    "noUnusedParameters": true,
     "removeComments": false,
     "preserveConstEnums": true,
     "sourceMap": true,
@@ -30,5 +28,5 @@
     "**/*.test.ts",
     "**/*.test.tsx"
   ],
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"]
+  "include": ["next-env.d.ts", "node.d.ts", "**/*.ts", "**/*.tsx"]
 }

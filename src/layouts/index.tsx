@@ -2,7 +2,7 @@ import React from 'react';
 import { Helmet } from 'react-helmet';
 import { styled } from 'linaria/react';
 
-import Navigation from '../modules/navigation/Navigation';
+import Header from '../components/header/Header';
 import { fontSize } from '../constants/styles';
 import { Theme } from '../constants/themes';
 import { useReduxState } from '../state';
@@ -77,6 +77,17 @@ const Layout = styled.div`
   max-width: 100vw;
   max-height: 100vh;
   background-color: ${({ theme }: LayoutProps) => theme.background};
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+`;
+
+const Body = styled.div`
+  flex: 1 1 auto;
+`;
+
+const Footer = styled.div`
+  flex: 0 0 3rem;
 `;
 
 const IndexLayout: React.FunctionComponent = ({ children }) => {
@@ -90,8 +101,9 @@ const IndexLayout: React.FunctionComponent = ({ children }) => {
           content="Super Mario Maker, Super Mario Maker 2 and Super Mario 64 Maker course database for consoles Switch, Wii U, 3DS and emulators Yuzu, Cemu, Citra and decaf."
         />
       </Helmet>
-      <Navigation />
-      {children}
+      <Header />
+      <Body>{children}</Body>
+      <Footer></Footer>
     </Layout>
   );
 };

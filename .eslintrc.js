@@ -15,6 +15,9 @@ module.exports = {
       jsx: true,
     },
   },
+  env: {
+    node: true,
+  },
   rules: {
     '@typescript-eslint/explicit-function-return-type': 'off',
     '@typescript-eslint/explicit-member-accessibility': [

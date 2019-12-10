@@ -19,6 +19,7 @@
 .DS_Store
 .env*
 .linaria-cache
+.secret.js
 
 # debug
 npm-debug.log*

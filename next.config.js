@@ -3,6 +3,9 @@ const withBundleAnalyzer = require('@next/bundle-analyzer')({
   enabled: process.env.ANALYZE === 'true',
 });
 
+const secrets = require('./.secret');
+const environment = require('./environment');
+
 module.exports = {
   ...withBundleAnalyzer(
     withCSS({
@@ -25,6 +28,7 @@ module.exports = {
   ),
   experimental: { publicDirectory: true },
   env: {
-    GOOGLE_CLIENT_ID: process.env.GOOGLE_CLIENT_ID,
+    GOOGLE_CLIENT_ID: process.env.GOOGLE_CLIENT_ID || secrets.GOOGLE_CLIENT_ID,
+    ...environment[process.env.NODE_ENV],
   },
 };

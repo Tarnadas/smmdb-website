@@ -10,6 +10,7 @@ import { State, Actions, ActionType } from './types';
 export const StateProvider: React.FunctionComponent = ({ children }) => {
   const initialState: State = {
     theme: new DefaultTheme(),
+    identity: undefined,
   };
 
   const reducer: Reducer<State, Actions> = (

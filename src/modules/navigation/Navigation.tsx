@@ -1,5 +1,21 @@
 import React from 'react';
+import { styled } from 'linaria/react';
 
-const Navigation: React.FunctionComponent = () => <div></div>;
+import Panel from '../../components/panel/Panel';
+
+import NavigationButton from './NavigationButton';
+
+const StyledNavigation = styled.div`
+  display: flex;
+  flex: 1 0 auto;
+`;
+
+const Navigation: React.FunctionComponent = () => (
+  <StyledNavigation>
+    <Panel>
+      <NavigationButton href="/">Home</NavigationButton>
+    </Panel>
+  </StyledNavigation>
+);
 
 export default Navigation;

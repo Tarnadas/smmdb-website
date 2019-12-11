@@ -10,9 +10,11 @@ export type Themes = DefaultTheme;
 
 export interface Theme {
   background: string;
+  backgroundHeader: string;
 }
 
 export class DefaultTheme implements Readonly<Theme> {
-  background = COLOR_YELLOW;
+  background = COLOR_GREEN;
+  backgroundHeader = COLOR_YELLOW;
 }
 /* eslint-enable */

@@ -9,11 +9,13 @@ class SMMDB extends App {
     const { Component, pageProps } = this.props;
 
     return (
-      <StateProvider>
-        <IndexLayout>
-          <Component {...pageProps} />
-        </IndexLayout>
-      </StateProvider>
+      <React.StrictMode>
+        <StateProvider>
+          <IndexLayout>
+            <Component {...pageProps} />
+          </IndexLayout>
+        </StateProvider>
+      </React.StrictMode>
     );
   }
 }

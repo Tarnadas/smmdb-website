@@ -16,13 +16,13 @@ const NavigationButton: React.FunctionComponent<NavigationButtonProps> = ({
   children,
   href,
 }) => (
-  <Panel>
-    <StyledPanel>
-      <Link href={href}>
-        <a>{children}</a>
-      </Link>
-    </StyledPanel>
-  </Panel>
+  <Link href={href}>
+    <a>
+      <Panel>
+        <StyledPanel>{children}</StyledPanel>
+      </Panel>
+    </a>
+  </Link>
 );
 
 export default NavigationButton;

@@ -18,7 +18,9 @@ const NavigationButton: React.FunctionComponent<NavigationButtonProps> = ({
 }) => (
   <Panel>
     <StyledPanel>
-      <Link href={href}>{children}</Link>
+      <Link href={href}>
+        <a>{children}</a>
+      </Link>
     </StyledPanel>
   </Panel>
 );

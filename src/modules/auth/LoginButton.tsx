@@ -1,7 +1,6 @@
 import React, { useEffect } from 'react';
 import GoogleLogin from 'react-google-login';
 import { useDispatch } from 'react-redux';
-import fetch from 'isomorphic-unfetch';
 import { styled } from 'linaria/react';
 
 import { SetIdentity } from '../../state/types';

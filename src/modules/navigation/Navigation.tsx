@@ -14,6 +14,7 @@ const Navigation: React.FunctionComponent = () => (
   <StyledNavigation>
     <Panel>
       <NavigationButton href="/">Home</NavigationButton>
+      <NavigationButton href="/courses">Courses</NavigationButton>
     </Panel>
   </StyledNavigation>
 );

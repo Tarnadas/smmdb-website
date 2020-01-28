@@ -3,8 +3,8 @@ import Headroom from 'react-headroom';
 import { styled } from 'linaria/react';
 import { useRouter } from 'next/router';
 
-import LoginButton from '../../modules/auth/LoginButton';
-import Navigation from '../../modules/navigation/Navigation';
+import { LoginButton } from '../../modules/auth';
+import { Navigation } from '../../modules/navigation';
 import { getTitle } from '../../constants/seo';
 import { Theme } from '../../constants/themes';
 import { useReduxState } from '../../state';
@@ -46,7 +46,7 @@ const Title = styled.div`
   justify-content: flex-start;
 `;
 
-const Header: React.FunctionComponent = () => {
+export const Header: React.FunctionComponent = () => {
   const theme = useReduxState(state => state.theme);
   const router = useRouter();
   return (
@@ -61,5 +61,3 @@ const Header: React.FunctionComponent = () => {
     </HeaderWrapper>
   );
 };
-
-export default Header;

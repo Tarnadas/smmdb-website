@@ -2,7 +2,7 @@ import React from 'react';
 import { Helmet } from 'react-helmet';
 import { styled } from 'linaria/react';
 
-import Header from '../components/header/Header';
+import { Header } from '../components/header';
 import { fontSize } from '../constants/styles';
 import { Theme } from '../constants/themes';
 import { useReduxState } from '../state';
@@ -18,14 +18,6 @@ const Layout = styled.div`
       font-family: SuperMarioMakerExtended;
       src: url(/fonts/smme.woff) format('woff'),
         url(/fonts/smme.ttf) format('truetype');
-    }
-    @keyframes rotate {
-      0% {
-        transform: rotate(0deg);
-      }
-      100% {
-        transform: rotate(360deg);
-      }
     }
 
     html {

@@ -7,4 +7,4 @@ const CoursesPage: NextPage = () => {
 
 export default CoursesPage;
 
-CoursesPage.getInitialProps = async () => {};
+// CoursesPage.getInitialProps = async () => {};

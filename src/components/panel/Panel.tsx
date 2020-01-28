@@ -19,7 +19,7 @@ const StyledPanel = styled.div`
   padding: 0.3rem;
 `;
 
-const Panel: React.FunctionComponent<PanelProps> = ({
+export const Panel: React.FunctionComponent<PanelProps> = ({
   children,
   className,
   style,
@@ -30,5 +30,3 @@ const Panel: React.FunctionComponent<PanelProps> = ({
     </StyledPanel>
   );
 };
-
-export default Panel;

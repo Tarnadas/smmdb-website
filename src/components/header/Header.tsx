@@ -1,5 +1,4 @@
 import React from 'react';
-import Headroom from 'react-headroom';
 import { styled } from 'linaria/react';
 import { useRouter } from 'next/router';
 
@@ -22,7 +21,7 @@ const HeaderWrapper = styled.div`
   background-color: ${({ theme }: StyledHeaderProps) => theme.backgroundHeader};
 `;
 
-const StyledHeader = styled(Headroom)`
+const StyledHeader = styled.div`
   flex: 1 0 auto;
   background-color: ${({ theme }: StyledHeaderProps) => theme.backgroundHeader};
 

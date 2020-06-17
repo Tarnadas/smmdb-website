@@ -76,6 +76,7 @@ const Layout = styled.div`
 
 const Body = styled.div`
   flex: 1 1 auto;
+  overflow: auto;
 `;
 
 const Footer = styled.div`
